@@ -17,7 +17,7 @@ sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
 __3. Clone this Repository__
 ```console
-git clone https://github.com/reigant/todo-simple-app.git && cd todo
+git clone https://github.com/reigant/todo.git && cd todo
 ```
 __4. Copy .env File__
 ```console
