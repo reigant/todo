@@ -1,0 +1,17 @@
+#!/bin/bash
+
+cd /var/www/html/todo
+#clear cache
+php artisan cache:clear
+php artisan config:clear
+composer dump-autoload
+chown -R www-data:www-data /var/www/html/todo/storage
+
+#copy .env file
+rm -rf .env
+cp .env.example .env
+
+#update .env
+sed -i 's#DB_DATABASE=#DB_DATABASE=tanto#' .env
+sed -i 's#DB_USERNAME=#DB_USERNAME=tanto#' .env
+sed -i 's#DB_PASSWORD=#DB_PASSWORD=tanto-devax-demo321#' .env
